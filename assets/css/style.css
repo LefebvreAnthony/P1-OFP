@@ -1,0 +1,169 @@
+@import url(./fontFamily.css);
+
+* {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #fff;
+}
+p { 
+    font-family: 'Federo';
+}
+h1, h2, h3, a {
+    font-family: 'Outfit', sans-serif;
+}
+.displayFlex {
+    display: flex;
+}
+.marginLR {
+    margin: 0 10%;
+}
+
+
+/**************  ACCEUIL ************/
+
+
+/**************  HEADER **********/
+
+header {
+    position: relative;
+    background: linear-gradient(#000, rgba(0, 0, 0, 0));
+}
+header::after {
+    position: absolute;
+    z-index: -10;
+    content: '';
+    background: center/ cover no-repeat url(../img/fondHeaderAcceuil.png);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+header > div {
+    justify-content: space-between;
+}
+nav {
+    flex-direction: column;
+    justify-content: center;
+}
+nav > ul {
+    display: flex;
+}
+nav > ul > li > a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-right: 50px;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    transition: 400ms ease-in-out;
+}
+nav > ul > li > a:hover {
+    transform: scale(1.1);
+    box-shadow: inset 0 0 8px white;
+}
+header > article {
+    color: #fff;
+    margin: 0 33%;
+    padding-bottom: 50px;
+}
+header > article > h1 {
+    padding-bottom: 3px;
+    display: inline-block;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin: 50px 0;
+    border-bottom: 2px solid #7C9FBF;
+    
+}
+header > article > p {
+    font-size: 1.3rem;
+    padding-bottom: 20px;
+    font-weight: 500;
+}
+header > article > a {
+    background-color: #7C9FBF;
+    border-radius: 7px;
+    margin: 0 33%;
+    display: inline-block;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #fff;
+    transition: 300ms ease-in-out;
+}
+header > article > a:hover {
+    transform: scale(1.01);
+    background-color: #7c9fbfb4;
+}
+
+
+
+/*************** MAIN ***********/
+
+
+/********** SECTION 1 ********/
+
+#infoRegion {
+    position: relative;
+    padding: 10%;
+}
+#infoRegion > article {
+    width: 45%;
+    position: relative;
+    margin-left: 10%;
+    padding: 30px;
+    margin-bottom: 100px;
+    box-shadow: 0 0 25px  rgba(0, 0, 0, 0.582);
+}
+#infoRegion > article > h2 {
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+#infoRegion > article > p {
+    font-size: 1.5rem;
+}
+#infoRegion > figure {
+    position: absolute;
+    top: 17%;
+    right: 10%;
+    
+}
+
+
+
+#imgRegion {
+    position: relative;
+}
+#imgRegion > figure:first-child {
+    z-index: 100;
+    transition: 500ms ease-in-out;
+}
+#imgRegion > figure:first-child::after{
+    display: none;
+    content: url(../img/annecyL.png);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+#imgRegion > figure:first-child:hover::after {
+    display: block;
+}
+#imgRegion > figure {
+    position: absolute;
+}
+#imgRegion > figure > img {
+    width: 100%;
+}
