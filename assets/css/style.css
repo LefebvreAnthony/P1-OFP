@@ -23,7 +23,9 @@ h1, h2, h3, a {
 .marginLR {
     margin: 0 10%;
 }
-
+.textCenter {
+    text-align: center;
+}
 
 /**************  ACCEUIL ************/
 
@@ -141,29 +143,262 @@ header > article > a:hover {
 }
 
 
-
 #imgRegion {
-    position: relative;
-}
-#imgRegion > figure:first-child {
-    z-index: 100;
-    transition: 500ms ease-in-out;
-}
-#imgRegion > figure:first-child::after{
-    display: none;
-    content: url(../img/annecyL.png);
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-}
-#imgRegion > figure:first-child:hover::after {
-    display: block;
-}
-#imgRegion > figure {
-    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 400px 400px;
 }
 #imgRegion > figure > img {
+    height: 100%;
+    width: 100%;
+}
+
+
+
+
+/********** FOOTER **********/
+
+footer {
+    color: #fff;
+    background-color: #384340;
+    padding: 30px 0 10px 0;
+}
+footer a {
+    transition: 200ms ease-in-out;
+}
+footer a:hover {
+    opacity: 0.7;
+    color: #909656;
+
+}
+footer > div > section > h3 {
+    padding-bottom: 5px;
+    margin-bottom: 30px;
+    display: inline-block;
+    border-bottom: 2px solid #7C9FBF;
+}
+footer > div:first-child {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
+}
+footer > div:first-child > section {
+    width: 33%;
+    text-align: center;
+}
+footer > div:first-child > section:first-child {
+    border-right: 1px solid rgba(255, 255, 255, 0.575);
+}
+footer > div:first-child > section:last-child {
+    border-left: 1px solid rgba(255, 255, 255, 0.575);
+}
+#mail > form > fieldset {
+    border: none;
+}
+#mail > form > fieldset > legend {
+    font-size: 1.1rem;
+    padding-bottom: 20px;
+}
+#mail > form > fieldset > input {
+    padding: 5px 10px;
+}
+#mail > form > fieldset > input[type="button"] {
+
+    font-weight: 700;
+    background-color: #909656;
+}
+#mail > form > fieldset > input[type="button"]:hover {
+    opacity: 0.7;
+}
+#contact {
+    display: flex;
+    justify-content: center;
+}
+#contact > figure > img {
+    width: 100%;
+}
+footer > div:last-child {
+    text-align: center;
+}
+
+
+
+/********** SECOND PAGE  LIEUX INCONTOURNABLES ********/
+
+#headerLieux::after {
+    
+    background: center/ cover no-repeat url(../img/aiguilles-de-chamonix-hiver.jpg);
+}
+#headerLieux {
+    margin-bottom: 10px;
+    box-shadow: 0 10px 0 rgba(0, 0, 0, 0.582);
+}
+#headerLieux > article {
+    width:100%;
+    margin: 0;
+}
+#mainLieux > section {
+    color: #fff;
+    height: 100vh; 
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center; 
+    flex-direction: column;
+    padding: 2vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-size: 4vw;
+}
+#mainLieux > section:first-of-type {
+    background-image: url(../img/evian.jpg);
+}
+#mainLieux > section:nth-of-type(2) {
+    background-image: url(../img/samoens-photo1.jpg);
+}
+#mainLieux > section:nth-of-type(3) {
+    background-image: url(../img/Sixt-Fer-A-Cheval.jpg);
+}
+#mainLieux > section:nth-of-type(4) {
+    background-image: url(../img/annecy.jpg);
+}
+#mainLieux > section:nth-of-type(5) {
+    background-image: url(../img/aiguilles-de-chamonix-hiver.jpg);
+}
+#mainLieux > section:nth-of-type(6) {
+    background-image: url(../img/Monument_des_Glières.jpg);
+}
+#mainLieux > section:nth-of-type(7) {
+    background-image: url(../img/lacTempete.jpg);
+}
+#mainLieux > section:nth-of-type(8) {
+    background-image: url(../img/vueSaleve.jpg);
+}
+#mainLieux > section:nth-of-type(9) {
+    background-image: url(../img/plaineJoux.jpg);
+}
+#mainLieux > section:nth-of-type(10) {
+    background-image: url(../img/fantasticable_chatel.jpg);
+}
+#mainLieux > section > h2{
+    padding: 20px;
+    z-index: 100;
+    position: relative;
+}
+#mainLieux > section > h2::after{
+    z-index: -1;
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 10%;
+    background-color: rgba(0, 0, 0, 0.582);
+}
+
+
+
+/*********** THIRD PAGE MARCHES ET FOIRES *********/
+
+#headerFoires::after {
+    background: center/ cover no-repeat url(../img/foires/coverHeader.png);
+}
+#headerFoires > article {
+    width:100%;
+    margin: 0;
+}
+#mainFoires > section > article {
+    display: flex;
+}
+#mainFoires > section > article > div {
+    padding: 5% 7%;
+}
+#mainFoires > section > article > div > h2 {
+    padding-bottom: 10%;
+}
+#mainFoires > section > article > div > p {
+    font-size: 1.2rem;
+    padding-bottom: 30px;
+}
+#mainFoires > section > article > div > a {
+    margin-top: 20px;
+    display: inline-block;
+    background-color: #7C9FBF;
+    border-radius: 8px;
+    color: #000;
+    padding:  7px 14px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.2rem;
+    transition: 200ms ease-in-out;
+}
+#mainFoires > section > article > div > a:hover {
+    opacity: 0.7;
+}
+.darken {
+    color: #fff;
+    background-color: #384340;
+}
+.light {
+    background-color: #909656;
+}
+
+
+
+/*************** FOUR PAGE ACTUALITE ***************/
+
+#headerActu::after {
+    background: center/ cover no-repeat url(../img/actu/actuCover.png);
+}
+#mainActu {
+    padding: 3% 0;
+}
+#mainActu > section > article {
+    display: flex;
+    justify-content: space-around;
+    color: #fff;
+    margin-bottom: 5%;
+}
+#mainActu > section > article > div {
+    width: 33%;
+    background-color: #384340;
+    padding-top: 3%;
+    box-shadow: 0px 4px 27px 19px rgba(0, 0, 0, 0.25);
+}
+#mainActu > section > article > div > h2, #mainActu > section > article > div > p {
+    text-align: center;
+    margin: 5% 10%;
+}
+#mainActu > section > article > div > p {
+    font-size: 1.3rem;
+}
+#mainActu > section > article > figure {
+    position: relative;
+    width: 33%;
+}
+.figLeft::after {
+    z-index: -10;
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    top: 20%;
+    right: -70%;
+    border: 5px solid #909656;
+}
+.figRight::before {
+    z-index: -10;
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    top: 20%;
+    left: -70%;
+    border: 5px solid #909656;
+}
+#mainActu > section > article > figure > img {
     width: 100%;
 }
