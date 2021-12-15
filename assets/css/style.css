@@ -49,6 +49,9 @@ header::after {
 header > div {
     justify-content: space-between;
 }
+#navToggle {
+    display: none;
+}
 nav {
     flex-direction: column;
     justify-content: center;
@@ -100,10 +103,14 @@ header > article > a {
     font-weight: 700;
     color: #fff;
     transition: 300ms ease-in-out;
+    
+    box-shadow: 0 0 5px 2px #fff;
 }
 header > article > a:hover {
     transform: scale(1.01);
-    background-color: #7c9fbfb4;
+    background-color: rgba(255, 255, 255, 0.582);
+    color: #000;
+    box-shadow: 0 0 5px 2px #000;
 }
 
 
@@ -333,10 +340,14 @@ footer > div:last-child {
     text-transform: uppercase;
     font-weight: 700;
     font-size: 1.2rem;
-    transition: 200ms ease-in-out;
+    transition: 300ms ease-in-out;
+    box-shadow: 0 0 5px 2px #000;
 }
 #mainFoires > section > article > div > a:hover {
     opacity: 0.7;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.582);
+    box-shadow: 0 0 5px 2px #fff;
 }
 .darken {
     color: #fff;
@@ -402,3 +413,186 @@ footer > div:last-child {
 #mainActu > section > article > figure > img {
     width: 100%;
 }
+
+
+/******** MEDIAS QUERIES ***********/
+
+@media screen and (max-width: 1400px) {
+    .marginLR {
+        margin: 0;
+        justify-content: space-around;
+    }
+    header {
+        font-size: 0.7rem;
+    }
+    #headerFig {
+        width: 20%;
+    }
+    #headerFig > img {
+        width: 100%;
+    }
+    header > article > h1, header > article > p {
+        font-size: 1rem;
+    }
+    #infoRegion > figure {
+        z-index: -10;
+    }
+    #mainFoires {
+        font-size: 1rem;
+    }
+
+}
+@media screen and (max-width: 1050px) {
+    #mainFoires > section > article > div {
+        padding: 3% 4%;
+    }
+    #mainFoires > section > article > div > p {
+        font-size: 1rem;
+    }
+    #mainFoires > section > article > div > a {
+        font-size: 0.7rem;
+    }
+}
+@media screen and (max-width: 920px) {
+    #mainFoires > section > article > figure > img {
+        width: 50vw;
+        margin: 30% 0;
+    }
+}
+@media screen and (max-width: 850px) {
+    
+    .marginLR {
+        justify-content: space-between;
+    }
+    header > article {
+        margin: 0;
+        padding: 0 5% 3% 5%;
+        text-align: center;
+    }
+    #infoRegion > article {
+        width: 80%;
+        margin: 0 0 5% 0;
+    }
+    #infoRegion > article > h2 {
+        position: relative;
+        text-align: center;
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+    #infoRegion > article > p {
+        font-size: 1rem;
+        font-weight: 600;
+    }
+    #infoRegion > figure {
+        width: 50%;
+    }
+    
+    #infoRegion > figure > img {
+        width: 100%;
+    }
+    nav > ul > li > a {
+        margin-right: 10px;
+    }
+    #imgRegion {
+        display: block;
+    }
+    #footerMedia {
+        flex-direction: column;
+        align-items: center;
+    }
+    #footerMedia > section {
+        width: initial;
+        padding-bottom: 3%;
+        border: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.575);
+    }
+    #headerLieux > article, #headerFoires > article {
+        width: initial;
+    }
+    #mainActu > section > article {
+        flex-direction: column;
+        align-items: center;
+    }
+    #mainActu > section > article > figure {
+        width: 50%;
+    }
+    #mainActu > section > article > figure::after, #mainActu > section > article > figure::before {
+        top: 0; 
+        right: 0;
+        left: 0;
+        bottom: 0;
+    }
+    #mainActu > section > article > div {
+        width: initial;
+    }
+
+}
+@media screen and (max-width: 600px) {
+    .marginLR{
+        padding-top: 2%;
+        justify-content: space-around;    
+    }
+    #headerFig {
+        width: 33%;
+        margin-bottom: 20px;
+    }
+    #navToggle {
+        display: inline-block;
+        color: #fff;
+        font-size: 1.5rem;
+        border: none;
+        background-color: transparent;
+        display: block;
+        transition: 200ms ease-in-out;
+    }
+    .navMedia, .marginLR {
+        align-items: center;
+        flex-direction: column;
+    }
+    .navMedia > ul {
+        flex-direction: column;
+    }
+    .navMedia > ul > li:first-child > a {
+        border-bottom: none;
+    }
+    .navMedia > ul > li:last-child > a, .navMedia > ul > li:nth-of-type(3) > a  {
+        border-top: none;
+    }
+}
+@media screen and (max-width: 400px) {
+    
+    #infoRegion > figure {
+        top: 35%;
+        right: 10%;
+    }
+    #contact > a > img{
+        width: 50px;
+    }
+    .darken {
+        background-color: #384340a6;
+    }
+    .light {
+        background-color: #909656bb;
+
+    }
+    #mainFoires > section > article {
+        text-align: center;
+        position: relative;
+    }
+    #mainFoires > section > article > figure {
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 100%;
+    }
+    #mainFoires > section > article > figure > img {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+/* 
+.menuActive {
+    display: block;
+} */
