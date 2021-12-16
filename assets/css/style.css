@@ -49,9 +49,6 @@ header::after {
 header > div {
     justify-content: space-between;
 }
-#navToggle {
-    display: none;
-}
 nav {
     flex-direction: column;
     justify-content: center;
@@ -310,6 +307,27 @@ footer > div:last-child {
 
 /*********** THIRD PAGE MARCHES ET FOIRES *********/
 
+
+.displayHide {
+    display: none;
+}
+.adresseBlock {
+    background-color: rgba(0, 0, 0, 0.596);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    font-size: 1.3rem;
+    text-align: center;
+    transition: 300ms ease-in-out;
+}
+.adresseBlock > h3 {
+    margin: 10% 0;
+}
+.articleAside {
+    position: relative;
+}
 #headerFoires::after {
     background: center/ cover no-repeat url(../img/foires/coverHeader.png);
 }
@@ -320,17 +338,17 @@ footer > div:last-child {
 #mainFoires > section > article {
     display: flex;
 }
-#mainFoires > section > article > div {
+#mainFoires > section > article > .textArticle {
     padding: 5% 7%;
 }
-#mainFoires > section > article > div > h2 {
+#mainFoires > section > article > .textArticle > h2 {
     padding-bottom: 10%;
 }
-#mainFoires > section > article > div > p {
+#mainFoires > section > article > .textArticle > p {
     font-size: 1.2rem;
     padding-bottom: 30px;
 }
-#mainFoires > section > article > div > a {
+#mainFoires > section > article > .textArticle > button {
     margin-top: 20px;
     display: inline-block;
     background-color: #7C9FBF;
@@ -355,6 +373,7 @@ footer > div:last-child {
 }
 .light {
     background-color: #909656;
+    flex-direction: row-reverse;
 }
 
 
@@ -443,7 +462,7 @@ footer > div:last-child {
 
 }
 @media screen and (max-width: 1050px) {
-    #mainFoires > section > article > div {
+    #mainFoires > section > article > div:first-child {
         padding: 3% 4%;
     }
     #mainFoires > section > article > div > p {
@@ -454,9 +473,12 @@ footer > div:last-child {
     }
 }
 @media screen and (max-width: 920px) {
-    #mainFoires > section > article > figure > img {
+    #mainFoires > section > article > figure > img, .articleAside >figure > img {
         width: 50vw;
         margin: 30% 0;
+    }
+    .adresseBlock{
+        margin: 0;
     }
 }
 @media screen and (max-width: 850px) {
@@ -536,15 +558,6 @@ footer > div:last-child {
         width: 33%;
         margin-bottom: 20px;
     }
-    #navToggle {
-        display: inline-block;
-        color: #fff;
-        font-size: 1.5rem;
-        border: none;
-        background-color: transparent;
-        display: block;
-        transition: 200ms ease-in-out;
-    }
     .navMedia, .marginLR {
         align-items: center;
         flex-direction: column;
@@ -579,20 +592,34 @@ footer > div:last-child {
         text-align: center;
         position: relative;
     }
-    #mainFoires > section > article > figure {
+    .articleAside > figure {
+        height: 100%;
+    }
+    #mainFoires > section > article > figure, .articleAside {
         z-index: -1;
         position: absolute;
         top: 0;
         height: 100%;
         width: 100%;
     }
-    #mainFoires > section > article > figure > img {
+    #mainFoires > section > article > figure, .articleAside .adresseBlock {
+        font-size: 1rem;
+    }
+    #mainFoires > section > article > figure, .articleAside .adresseBlock > h3 {
+        margin: 5% 0;
+    }
+    #mainFoires > section > article > figure > img, .articleAside > figure > img{
         margin: 0;
         width: 100%;
         height: 100%;
     }
+    .visibilityHide {
+        opacity: 0;
+        visibility: hidden;
+    }
+    .visibilityYes {
+        visibility: visible;
+        opacity: 1;
+        transition: opacity 3s visibility 3s;
+    }
 }
-/* 
-.menuActive {
-    display: block;
-} */
