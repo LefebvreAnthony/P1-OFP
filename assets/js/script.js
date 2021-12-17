@@ -11,6 +11,8 @@ for(i = 0; i < buttonAdresse.length; i++ ){
         adresseBlock = this.parentNode.nextSibling.nextSibling.childNodes;
         adresseBlock[1].classList.toggle('visibilityYes');
         adresseBlock[1].classList.toggle('visibilityHide');
+        adresseBlock[1].classList.toggle('visibilityDesktopYes');
+        adresseBlock[1].classList.toggle('visibilityDesktopHide');
         articleHide.classList.toggle('visibilityHide');
         articleHide2.classList.toggle('visibilityHide');
         articleHide3.classList.toggle('visibilityHide');

@@ -375,6 +375,19 @@ footer > div:last-child {
     background-color: #909656;
     flex-direction: row-reverse;
 }
+.light .adresseBlock {
+    
+    color: #fff;
+}
+.visibilityDesktopHide {
+    opacity: 0;
+    visibility: hidden;
+}
+.visibilityDesktopYes {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 3s visibility 3s;
+}
 
 
 
@@ -459,7 +472,6 @@ footer > div:last-child {
     #mainFoires {
         font-size: 1rem;
     }
-
 }
 @media screen and (max-width: 1050px) {
     #mainFoires > section > article > div:first-child {
